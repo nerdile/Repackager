@@ -6,6 +6,9 @@ Param(
 if (!$g_RepackagedFeed) {
   throw "g_RepackagedFeed was not set";
 }
+if (!$g_RepackagedPrefix) {
+  throw "g_RepackagedPrefix was not set";
+}
 
 foreach ($pkg in $updates) {
   & $PackageDir\$pkg\make_package_from_upstream.ps1
